@@ -1,0 +1,22 @@
+# Check http://editorconfig.org for more information
+# This is the main config file for this project:
+root = true
+
+# Set default charset
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# 4 space indentation
+[*.py]
+indent_style = space
+indent_size = 4
+max_line_length = 120
+
+# 2 space indentation
+[*.{html,css,scss,json,yml,js,jsx,ts,tsx,vue}]
+indent_style = space
+indent_size = 2
