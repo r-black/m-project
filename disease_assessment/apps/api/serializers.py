@@ -21,7 +21,7 @@ class MedicalRecordSerializer(serializers.ModelSerializer):
             'diagnoses_divergence',
             'in_date',
             'work_capacity_name',
-            'clinical_course'
+            'clinical_course',
             'out_date',
             'diagnosis',
             'm_record_mkb_name',
