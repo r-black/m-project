@@ -58,7 +58,9 @@ class AnamnesisSerializer(serializers.ModelSerializer):
 
 
 class PersonSerializer(serializers.ModelSerializer):
-    medical_records =serializers.SerializerMethodField()
+    medical_records = serializers.SerializerMethodField()
+    dispensary_registrations = serializers.SerializerMethodField()
+    anamnesis = serializers.SerializerMethodField()
 
     class Meta:
         model = Person
@@ -66,7 +68,9 @@ class PersonSerializer(serializers.ModelSerializer):
             'id',
             'birthdate',
             'sex',
-            'medical_records'
+            'medical_records',
+            'dispensary_registrations',
+            'anamnesis'
         )
 
     def get_medical_records(self, person):
@@ -75,6 +79,26 @@ class PersonSerializer(serializers.ModelSerializer):
         )
         serializer = MedicalRecordSerializer(
             medical_records,
+            many=True
+        )
+        return serializer.data
+
+    def get_dispensary_registrations(self, person):
+        dispensary_registrations = DispensaryRegistration.objects.filter(
+            person=person
+        )
+        serializer = DispensaryRegistrationSerializer(
+            dispensary_registrations,
+            many=True
+        )
+        return serializer.data
+
+    def get_anamnesis(self, person):
+        anamnesis = Anamnesis.objects.filter(
+            person=person
+        )
+        serializer = AnamnesisSerializer(
+            anamnesis,
             many=True
         )
         return serializer.data
