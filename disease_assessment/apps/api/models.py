@@ -66,8 +66,13 @@ class MedicalRecord(models.Model):
     diagnosis = models.TextField(blank=True, null=True)
     m_record_mkb_name = models.TextField(blank=True, null=True)
     visit_result_name = models.TextField(blank=True, null=True)
+    heart_rate = models.PositiveIntegerField(blank=True, null=True)
+    blood_pressure = models.CharField(max_length=100, blank=True, null=True)
+    blood_sugar = models.CharField(max_length=100, blank=True, null=True)
+    cholesterol = models.CharField(max_length=100, blank=True, null=True)
+    body_mass_index = models.CharField(max_length=100, blank=True, null=True)
 
-    MEDICAL_RECORDS_CSV_PATH = f'{settings.PROJECT_DIR}/data/raw/medical_records.csv'
+    MEDICAL_RECORDS_CSV_PATH = f'{settings.PROJECT_DIR}/data/raw/medical_records_test.csv'
 
     def __str__(self):
         return f'{self.person}'
