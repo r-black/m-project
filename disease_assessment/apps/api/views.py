@@ -1,6 +1,7 @@
 from rest_framework import viewsets, pagination, permissions
 from rest_framework.decorators import action
 from rest_framework.response import Response
+import pandas as pd
 
 from apps.api.models import (
     Person,
@@ -45,6 +46,25 @@ class MedicalRecordViewSet(viewsets.ModelViewSet):
     serializer_class = MedicalRecordSerializer
     pagination_class = pagination.LimitOffsetPagination
     permission_classes = (permissions.IsAuthenticated,)
+
+    def perform_create(self, serializer):
+        """
+        Create a medical record with heart disease risk prediction.
+        """
+        person_id = self.request.data.get('person_id')
+        birthdate = self.request.data.get('person').birthdate
+        sex = self.request.data.get('person').sex
+        blood_pressure = self.request.data.get('blood_pressure')
+        heart_rate = self.request.data.get('heart_rate')
+
+        # Unpickle model
+        model = pd.read_pickle(r"new_model.pickle")
+        # Make prediction
+        result = model.predict([[person_id, birthdate, sex, blood_pressure, heart_rate]])
+
+        heart_disease_risk = result[0]
+        Person.objects.filter(id=person_id).update(heart_disease_risk=heart_disease_risk)
+        serializer.save()
 
 
 class DispensaryRegistrationViewSet(viewsets.ModelViewSet):

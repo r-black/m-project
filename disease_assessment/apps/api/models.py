@@ -5,6 +5,8 @@ from django.db import models
 from django.conf import settings
 
 
+settings.configure()
+
 def datetime_parse(value):
     if not value:
         return None
@@ -26,6 +28,7 @@ def date_parse(value):
 class Person(models.Model):
     birthdate = models.DateField(blank=True, null=True)
     sex = models.CharField(max_length=4, blank=True, null=True)
+    heart_disease_risk = models.BooleanField(blank=True, null=True, default=False)
 
     PERSONS_CSV_PATH = f'{settings.PROJECT_DIR}/data/raw/persons.csv'
 
@@ -72,7 +75,7 @@ class MedicalRecord(models.Model):
     cholesterol = models.CharField(max_length=100, blank=True, null=True)
     body_mass_index = models.CharField(max_length=100, blank=True, null=True)
 
-    MEDICAL_RECORDS_CSV_PATH = f'{settings.PROJECT_DIR}/data/raw/medical_records_test.csv'
+    MEDICAL_RECORDS_CSV_PATH = f'{settings.PROJECT_DIR}/data/raw/medical_records.csv'
 
     def __str__(self):
         return f'{self.person}'
