@@ -1,11 +1,9 @@
 import pandas as pd
 from tqdm import tqdm
-from datetime import datetime
+from datetime import datetime, date
 from django.db import models
 from django.conf import settings
 
-
-settings.configure()
 
 def datetime_parse(value):
     if not value:
@@ -29,6 +27,24 @@ class Person(models.Model):
     birthdate = models.DateField(blank=True, null=True)
     sex = models.CharField(max_length=4, blank=True, null=True)
     heart_disease_risk = models.BooleanField(blank=True, null=True, default=False)
+    age = models.PositiveIntegerField(blank=True, null=True)
+    gender = models.PositiveIntegerField(blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        self.age = self.get_age()
+        self.gender = self.get_gender()
+        super(Person, self).save(*args, **kwargs)
+
+    def get_age(self):
+        today = date.today()
+        birthdate = self.birthdate
+        return today.year - birthdate.year - ((today.month, today.day) < (birthdate.month, birthdate.day))
+
+    def get_gender(self):
+        if self.sex == 'М':
+            return 1
+        else:
+            return 0
 
     PERSONS_CSV_PATH = f'{settings.PROJECT_DIR}/data/raw/persons.csv'
 
@@ -74,6 +90,38 @@ class MedicalRecord(models.Model):
     blood_sugar = models.CharField(max_length=100, blank=True, null=True)
     cholesterol = models.CharField(max_length=100, blank=True, null=True)
     body_mass_index = models.CharField(max_length=100, blank=True, null=True)
+    systolic_blood_pressure = models.PositiveIntegerField(blank=True, null=True)
+    diastolic_blood_pressure = models.PositiveIntegerField(blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        self.systolic_blood_pressure = self.get_systolic_blood_pressure()
+        self.diastolic_blood_pressure = self.get_diastolic_blood_pressure()
+
+        person_id = self.person.id
+        age = self.person.age
+        gender = self.person.gender
+        systolic_blood_pressure = self.systolic_blood_pressure
+        diastolic_blood_pressure = self.diastolic_blood_pressure
+        heart_rate = self.heart_rate
+
+        # Unpickle model
+        model = pd.read_pickle(r"new_model.pickle")
+        # Make prediction
+        result = model.predict(
+            [[age, gender, person_id, systolic_blood_pressure, diastolic_blood_pressure, heart_rate]])
+
+        heart_disease_risk = result[0]
+        print(heart_disease_risk)
+        Person.objects.filter(id=person_id).update(heart_disease_risk=heart_disease_risk)
+        super(MedicalRecord, self).save(*args, **kwargs)
+
+    def get_systolic_blood_pressure(self):
+        if self.blood_pressure:
+            return self.blood_pressure.split('/')[0]
+
+    def get_diastolic_blood_pressure(self):
+        if self.blood_pressure:
+            return self.blood_pressure.split('/')[1]
 
     MEDICAL_RECORDS_CSV_PATH = f'{settings.PROJECT_DIR}/data/raw/medical_records.csv'
 

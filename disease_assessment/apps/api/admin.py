@@ -24,7 +24,7 @@ class MedicalRecordAdmin(admin.ModelAdmin):
         'person',
         'row_number',
         'clinical_course',
-        'diagnosis',
+        'systolic_blood_pressure',
         'heart_rate',
         'blood_pressure',
         'blood_sugar',

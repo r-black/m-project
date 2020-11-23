@@ -1,4 +1,5 @@
-from rest_framework import viewsets, pagination, permissions
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import viewsets, pagination, permissions, filters
 from rest_framework.decorators import action
 from rest_framework.response import Response
 import pandas as pd
@@ -15,11 +16,15 @@ from apps.api.serializers import (
     DispensaryRegistrationSerializer,
     AnamnesisSerializer
 )
+from apps.api.filters import PersonFilter
 
 
 class PersonViewSet(viewsets.ModelViewSet):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
+    filter_backends = (DjangoFilterBackend, filters.OrderingFilter,)
+    filterset_class = PersonFilter
+    ordering = ('id')
     pagination_class = pagination.LimitOffsetPagination
     permission_classes = (permissions.IsAuthenticated,)
 
@@ -47,24 +52,27 @@ class MedicalRecordViewSet(viewsets.ModelViewSet):
     pagination_class = pagination.LimitOffsetPagination
     permission_classes = (permissions.IsAuthenticated,)
 
-    def perform_create(self, serializer):
-        """
-        Create a medical record with heart disease risk prediction.
-        """
-        person_id = self.request.data.get('person_id')
-        birthdate = self.request.data.get('person').birthdate
-        sex = self.request.data.get('person').sex
-        blood_pressure = self.request.data.get('blood_pressure')
-        heart_rate = self.request.data.get('heart_rate')
+    # def perform_update(self, serializer):
+    #     """
+    #     Create a medical record with heart disease risk prediction.
+    #     """
+    #     person_id = self.request.data.get('person_id')
+    #     age = self.request.data.get('person').age
+    #     gender = self.request.data.get('person').gender
+    #     systolic_blood_pressure = self.request.data.get('systolic_blood_pressure')
+    #     diastolic_blood_pressure = self.request.data.get('diastolic_blood_pressure')
+    #     heart_rate = self.request.data.get('heart_rate')
 
-        # Unpickle model
-        model = pd.read_pickle(r"new_model.pickle")
-        # Make prediction
-        result = model.predict([[person_id, birthdate, sex, blood_pressure, heart_rate]])
+    #     # Unpickle model
+    #     model = pd.read_pickle(r"new_model.pickle")
+    #     # Make prediction
+    #     result = model.predict(
+    #         [[age, gender, person_id, systolic_blood_pressure, diastolic_blood_pressure, heart_rate]])
 
-        heart_disease_risk = result[0]
-        Person.objects.filter(id=person_id).update(heart_disease_risk=heart_disease_risk)
-        serializer.save()
+    #     heart_disease_risk = result[0]
+    #     print(heart_disease_risk)
+    #     Person.objects.filter(id=person_id).update(heart_disease_risk=heart_disease_risk)
+    #     serializer.save()
 
 
 class DispensaryRegistrationViewSet(viewsets.ModelViewSet):

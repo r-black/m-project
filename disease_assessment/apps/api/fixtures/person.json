@@ -1,0 +1,1256 @@
+[
+  {
+    "model": "api.person",
+    "pk": 42,
+    "fields": {
+      "birthdate": "1953-03-12",
+      "sex": "М",
+      "heart_disease_risk": true,
+      "age": 67,
+      "gender": 1
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 43,
+    "fields": {
+      "birthdate": "1965-01-18",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 44,
+    "fields": {
+      "birthdate": "2008-07-03",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 45,
+    "fields": {
+      "birthdate": "1989-04-06",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 46,
+    "fields": {
+      "birthdate": "1994-12-06",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 47,
+    "fields": {
+      "birthdate": "1966-01-21",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 48,
+    "fields": {
+      "birthdate": "1961-02-26",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 49,
+    "fields": {
+      "birthdate": "2005-06-10",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 50,
+    "fields": {
+      "birthdate": "1957-01-31",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 51,
+    "fields": {
+      "birthdate": "1960-10-16",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 52,
+    "fields": {
+      "birthdate": "1930-11-08",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 53,
+    "fields": {
+      "birthdate": "1989-02-15",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 54,
+    "fields": {
+      "birthdate": "1933-05-29",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 55,
+    "fields": {
+      "birthdate": "1984-10-30",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 56,
+    "fields": {
+      "birthdate": "1971-07-15",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 57,
+    "fields": {
+      "birthdate": "2009-01-01",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 58,
+    "fields": {
+      "birthdate": "1973-05-25",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 59,
+    "fields": {
+      "birthdate": "1978-08-02",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 60,
+    "fields": {
+      "birthdate": "2006-01-31",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 61,
+    "fields": {
+      "birthdate": "1970-07-17",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 62,
+    "fields": {
+      "birthdate": "1970-04-02",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 63,
+    "fields": {
+      "birthdate": "1990-08-24",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 64,
+    "fields": {
+      "birthdate": "1995-06-01",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 65,
+    "fields": {
+      "birthdate": "1929-10-11",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 66,
+    "fields": {
+      "birthdate": "1959-11-28",
+      "sex": "М",
+      "heart_disease_risk": true,
+      "age": 60,
+      "gender": 1
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 67,
+    "fields": {
+      "birthdate": "1987-03-24",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 68,
+    "fields": {
+      "birthdate": "1958-11-09",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 69,
+    "fields": {
+      "birthdate": "1990-11-18",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": 30,
+      "gender": 1
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 70,
+    "fields": {
+      "birthdate": "1947-11-06",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 71,
+    "fields": {
+      "birthdate": "1960-02-05",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 72,
+    "fields": {
+      "birthdate": "1955-04-22",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 73,
+    "fields": {
+      "birthdate": "1945-04-06",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 74,
+    "fields": {
+      "birthdate": "1973-03-22",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 75,
+    "fields": {
+      "birthdate": "1976-05-14",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 76,
+    "fields": {
+      "birthdate": "1986-03-20",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 77,
+    "fields": {
+      "birthdate": "2008-07-18",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": 12,
+      "gender": 1
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 78,
+    "fields": {
+      "birthdate": "1953-08-23",
+      "sex": "М",
+      "heart_disease_risk": true,
+      "age": 67,
+      "gender": 1
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 79,
+    "fields": {
+      "birthdate": "1997-05-17",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": 23,
+      "gender": 1
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 80,
+    "fields": {
+      "birthdate": "1955-09-16",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 81,
+    "fields": {
+      "birthdate": "1991-01-15",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 82,
+    "fields": {
+      "birthdate": "1955-06-06",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 83,
+    "fields": {
+      "birthdate": "1962-07-22",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 84,
+    "fields": {
+      "birthdate": "1994-06-21",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 85,
+    "fields": {
+      "birthdate": "1997-11-02",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 86,
+    "fields": {
+      "birthdate": "1993-03-08",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 87,
+    "fields": {
+      "birthdate": "1962-02-04",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 88,
+    "fields": {
+      "birthdate": "1980-07-15",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 89,
+    "fields": {
+      "birthdate": "1937-02-15",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 90,
+    "fields": {
+      "birthdate": "1984-06-30",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 91,
+    "fields": {
+      "birthdate": "1991-10-12",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 92,
+    "fields": {
+      "birthdate": "1991-11-06",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 93,
+    "fields": {
+      "birthdate": "1987-11-28",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 94,
+    "fields": {
+      "birthdate": "1961-01-08",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 95,
+    "fields": {
+      "birthdate": "1968-06-02",
+      "sex": "М",
+      "heart_disease_risk": true,
+      "age": 52,
+      "gender": 1
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 96,
+    "fields": {
+      "birthdate": "1992-12-05",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 97,
+    "fields": {
+      "birthdate": "1942-01-17",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 98,
+    "fields": {
+      "birthdate": "1959-12-11",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 99,
+    "fields": {
+      "birthdate": "1954-05-03",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 100,
+    "fields": {
+      "birthdate": "1946-12-19",
+      "sex": "М",
+      "heart_disease_risk": true,
+      "age": 73,
+      "gender": 1
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 101,
+    "fields": {
+      "birthdate": "1994-03-20",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 102,
+    "fields": {
+      "birthdate": "1997-02-15",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 103,
+    "fields": {
+      "birthdate": "1962-09-17",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 104,
+    "fields": {
+      "birthdate": "1972-10-20",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 105,
+    "fields": {
+      "birthdate": "1993-08-20",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 106,
+    "fields": {
+      "birthdate": "1972-06-26",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 107,
+    "fields": {
+      "birthdate": "2007-04-06",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 108,
+    "fields": {
+      "birthdate": "1981-01-05",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 109,
+    "fields": {
+      "birthdate": "1989-03-29",
+      "sex": "М",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 110,
+    "fields": {
+      "birthdate": "1990-08-30",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 111,
+    "fields": {
+      "birthdate": "1998-05-11",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 112,
+    "fields": {
+      "birthdate": "2010-08-11",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 113,
+    "fields": {
+      "birthdate": "1986-01-11",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 114,
+    "fields": {
+      "birthdate": "2004-11-19",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 115,
+    "fields": {
+      "birthdate": "1985-08-23",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 116,
+    "fields": {
+      "birthdate": "2006-09-21",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 117,
+    "fields": {
+      "birthdate": "1931-11-01",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 118,
+    "fields": {
+      "birthdate": "1957-01-06",
+      "sex": "Ж",
+      "heart_disease_risk": true,
+      "age": 63,
+      "gender": 0
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 119,
+    "fields": {
+      "birthdate": "1960-04-11",
+      "sex": "Ж",
+      "heart_disease_risk": true,
+      "age": 60,
+      "gender": 0
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 120,
+    "fields": {
+      "birthdate": "1944-02-08",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 121,
+    "fields": {
+      "birthdate": "2010-09-20",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 122,
+    "fields": {
+      "birthdate": "1974-02-26",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 123,
+    "fields": {
+      "birthdate": "1972-03-04",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 124,
+    "fields": {
+      "birthdate": "1984-06-13",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 125,
+    "fields": {
+      "birthdate": "1973-09-01",
+      "sex": "Ж",
+      "heart_disease_risk": true,
+      "age": 47,
+      "gender": 0
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 126,
+    "fields": {
+      "birthdate": "1993-02-12",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 127,
+    "fields": {
+      "birthdate": "1947-09-15",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 128,
+    "fields": {
+      "birthdate": "1959-10-11",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 129,
+    "fields": {
+      "birthdate": "1931-03-12",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 130,
+    "fields": {
+      "birthdate": "2000-03-14",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 131,
+    "fields": {
+      "birthdate": "1986-07-26",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 132,
+    "fields": {
+      "birthdate": "1935-11-15",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 133,
+    "fields": {
+      "birthdate": "1960-12-12",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 134,
+    "fields": {
+      "birthdate": "1975-12-03",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 135,
+    "fields": {
+      "birthdate": "1984-11-11",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 136,
+    "fields": {
+      "birthdate": "1967-09-18",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 137,
+    "fields": {
+      "birthdate": "1993-09-25",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 138,
+    "fields": {
+      "birthdate": "1977-01-26",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 139,
+    "fields": {
+      "birthdate": "1932-03-15",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 140,
+    "fields": {
+      "birthdate": "1992-05-03",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 141,
+    "fields": {
+      "birthdate": "1950-05-31",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 142,
+    "fields": {
+      "birthdate": "1933-01-02",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 143,
+    "fields": {
+      "birthdate": "1950-04-15",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 144,
+    "fields": {
+      "birthdate": "1940-11-07",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 145,
+    "fields": {
+      "birthdate": "1942-08-15",
+      "sex": "Ж",
+      "heart_disease_risk": true,
+      "age": 78,
+      "gender": 0
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 146,
+    "fields": {
+      "birthdate": "1942-09-16",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 147,
+    "fields": {
+      "birthdate": "1960-03-08",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 148,
+    "fields": {
+      "birthdate": "1954-01-29",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 149,
+    "fields": {
+      "birthdate": "1970-06-13",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 150,
+    "fields": {
+      "birthdate": "1916-04-07",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 151,
+    "fields": {
+      "birthdate": "1962-01-12",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 152,
+    "fields": {
+      "birthdate": "1959-01-02",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 153,
+    "fields": {
+      "birthdate": "1947-01-10",
+      "sex": "Ж",
+      "heart_disease_risk": true,
+      "age": 73,
+      "gender": 0
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 154,
+    "fields": {
+      "birthdate": "1952-09-03",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  },
+  {
+    "model": "api.person",
+    "pk": 155,
+    "fields": {
+      "birthdate": "1994-11-27",
+      "sex": "Ж",
+      "heart_disease_risk": false,
+      "age": null,
+      "gender": null
+    }
+  }
+]

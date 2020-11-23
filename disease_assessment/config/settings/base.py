@@ -56,15 +56,15 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    # 'django_filters',
+    'django_filters',
     'rest_framework',
     # 'rest_framework.authtoken'
 ]
 
 LOCAL_APPS = [
     'apps.api',
-    # 'app.core',
-    # 'app.users',
+    'apps.core',
+    # 'apps.users',
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -245,6 +245,6 @@ REST_FRAMEWORK = {
     # that corresponds to the version requested in the incoming client request.
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
 
-    # 'EXCEPTION_HANDLER': 'apps.core.exceptions.custom_exception_handler',
+    'EXCEPTION_HANDLER': 'apps.core.exceptions.custom_exception_handler',
     'NON_FIELD_ERRORS_KEY': 'error',
 }

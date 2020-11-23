@@ -26,6 +26,10 @@ class MedicalRecordSerializer(serializers.ModelSerializer):
             'diagnosis',
             'm_record_mkb_name',
             'visit_result_name',
+            'heart_rate',
+            'blood_pressure',
+            'systolic_blood_pressure',
+            'diastolic_blood_pressure'
         )
 
 
@@ -68,6 +72,9 @@ class PersonSerializer(serializers.ModelSerializer):
             'id',
             'birthdate',
             'sex',
+            'age',
+            'gender',
+            'heart_disease_risk',
             'medical_records',
             'dispensary_registrations',
             'anamnesis'
