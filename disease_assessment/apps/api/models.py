@@ -108,7 +108,7 @@ class MedicalRecord(models.Model):
         model = pd.read_pickle(r"new_model.pickle")
         # Make prediction
         result = model.predict(
-            [[age, gender, person_id, systolic_blood_pressure, diastolic_blood_pressure, heart_rate]])
+            [[age, gender, systolic_blood_pressure, diastolic_blood_pressure, heart_rate]])
 
         heart_disease_risk = result[0]
         print(heart_disease_risk)
