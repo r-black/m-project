@@ -8,13 +8,17 @@ from apps.api.models import (
     Person,
     MedicalRecord,
     DispensaryRegistration,
-    Anamnesis
+    Anamnesis,
+    MedicalTest,
+    EMRProperty
 )
 from apps.api.serializers import (
     PersonSerializer,
     MedicalRecordSerializer,
     DispensaryRegistrationSerializer,
-    AnamnesisSerializer
+    AnamnesisSerializer,
+    MedicalTestSerializer,
+    EMRPropertySerializer
 )
 from apps.api.filters import PersonFilter
 
@@ -49,6 +53,8 @@ class PersonViewSet(viewsets.ModelViewSet):
 class MedicalRecordViewSet(viewsets.ModelViewSet):
     queryset = MedicalRecord.objects.all()
     serializer_class = MedicalRecordSerializer
+    filter_backends = (DjangoFilterBackend, filters.OrderingFilter,)
+    ordering = ('person_id')
     pagination_class = pagination.LimitOffsetPagination
     permission_classes = (permissions.IsAuthenticated,)
 
@@ -85,5 +91,23 @@ class DispensaryRegistrationViewSet(viewsets.ModelViewSet):
 class AnamnesisViewSet(viewsets.ModelViewSet):
     queryset = Anamnesis.objects.all()
     serializer_class = AnamnesisSerializer
+    pagination_class = pagination.LimitOffsetPagination
+    permission_classes = (permissions.IsAuthenticated,)
+
+
+class MedicalTestViewSet(viewsets.ModelViewSet):
+    queryset = MedicalTest.objects.all()
+    serializer_class = MedicalTestSerializer
+    filter_backends = (DjangoFilterBackend, filters.OrderingFilter,)
+    ordering = ('person_id')
+    pagination_class = pagination.LimitOffsetPagination
+    permission_classes = (permissions.IsAuthenticated,)
+
+
+class EMRPropertyViewSet(viewsets.ModelViewSet):
+    queryset = EMRProperty.objects.all()
+    serializer_class = EMRPropertySerializer
+    filter_backends = (DjangoFilterBackend, filters.OrderingFilter,)
+    ordering = ('person_id')
     pagination_class = pagination.LimitOffsetPagination
     permission_classes = (permissions.IsAuthenticated,)
