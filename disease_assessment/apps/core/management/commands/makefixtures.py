@@ -25,7 +25,7 @@ class Command(BaseCommand):
             self.stdout.write(self.style.ERROR('%s' % e))
 
     def handle(self, *args, **options):
-        app_labels = ('api',)
+        app_labels = ('api', 'training')
         for app_label in app_labels:
             app = apps.get_app_config(app_label)
             app_models = app.get_models()

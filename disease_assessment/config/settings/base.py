@@ -64,7 +64,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     'apps.api',
     'apps.core',
-    # 'apps.users',
+    'apps.training',
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
