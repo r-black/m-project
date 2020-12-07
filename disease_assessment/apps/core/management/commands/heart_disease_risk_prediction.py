@@ -68,17 +68,21 @@ class Command(BaseCommand):
 
         # Split into training data and test data
         target = df['heart_disease_risk']
-        df = df.drop(['heart_disease_risk', 'nan', 'pH', 'прозрачность', 'цвет', 'МРП', 'person'], axis=1)
-        df = df.apply(pd.to_numeric, errors='coerce')
-        df = df.replace([np.inf, -np.inf], np.nan)
-        df = df.fillna(0)
+        df = df[['холестерин', 'рост', 'масса тела', 'индекс массы тела', 'SYS на левой руке', 'DIA на левой руке',
+                 'SYS на правой руке', 'DIA на правой руке',  'age', 'gender', 'плотность (удельный вес)', 'СОЭ',
+                 'общий билирубин', 'NEUT (сегментоядерные нейтрофилы)', 'HGB (гемоглобин)', 'NEUT#', 'LYM (лимфоциты)',
+                 'WBC (лейкоциты)', 'уровень АлАТ', 'уровень АсАТ', 'палочкоядерные нейтрофилы', 'MONO (моноциты)',
+                 'EO (эозинофилы)', 'уробилин (количественно)', 'глюкоза (капиллярная кровь)', 'количество']]
+        # df = df.apply(pd.to_numeric, errors='coerce')
+        # df = df.replace([np.inf, -np.inf], np.nan)
+        # df = df.fillna(0)
         X = df
         y = target
         print(df)
         # print(df.columns.tolist())
 
         # # Create training and testing vars, It’s usually around 80/20 or 70/30.
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.8, random_state=1437)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.8, random_state=42)
 
         # # Now we’ll fit the model on the training data
         model = RandomForestClassifier()
@@ -92,17 +96,42 @@ class Command(BaseCommand):
 
         # # Unpickle model
         model = pd.read_pickle(r'new_model.pickle')
-
+                
         # # Take input from user
-        # age = int(input('Enter age: '))
-        # gender = int(input('Enter gender: '))
-        # # systolic_blood_pressure = int(input('Enter systolic blood pressure: '))
-        # # diastolic_blood_pressure = int(input('Enter diastolic blood pressure: '))
-        # # heart_rate = int(input('Enter heart rate: '))
+        # cholesterol = float(input('Enter cholesterol (mMol/L): '))
+        # height = float(input('Enter height (cm): '))
+        # body_mass = float(input('Enter body mass (kg): '))
+        # body_mass_index = float(input('Enter body mass index (number): '))
+        # SYS_on_left_hand = float(input('Enter SYS on the left hand (number): '))
+        # DIA_on_left_hand = float(input('Enter DIA on the left hand (number): '))
+        # SYS_on_right_hand = float(input('Enter SYS on the right hand (number): '))
+        # DIA_on_right_hand = float(input('Enter DIA on the right hand (number): '))
+        # age = float(input('Enter age (years): '))
+        # gender = float(input('Enter gender (0 or 1): '))
+        # density_specific_gravity = float(input('Enter density (specific gravity) (g/l): '))
+        # ESR = float(input('Enter ESR (СОЭ) (mm/h): '))
+        # total_bilirubin = float(input('Enter total bilirubin (μMol/L): '))
+        # NEUT_segmented_neutrophils = int(input('Enter NEUT (segmented neutrophils) (%): '))
+        # hemoglobin = float(input('Enter hemoglobin (g/l): '))
+        # NEUT = float(input('Enter NEUT (*10^9/l): '))
+        # lymphocytes = float(input('Enter lymphocytes (%): '))
+        # leukocytes = float(input('Enter leukocytes (*10^9/l): '))
+        # AlAT_level = float(input('Enter AlAT level (U/L): '))
+        # AsAT_level = float(input('Enter AsAT level (U/L): '))
+        # sticknuclear_neutrophils = float(input('Enter sticknuclear neutrophils (%): '))
+        # monocytes = float(input('Enter monocytes (%): '))
+        # eosinophils = float(input('Enter eosinophils (%): '))
+        # urobilin_quantitative = float(input('Enter urobilin (quantitative) (mMol/L): '))
+        # glucose_capillary_blood = float(input('Enter glucose (capillary blood) (mMol/L): '))
+        # amount_of_urine = float(input('Enter amount of urine (ml): '))
 
-        # # input must be 2D array
+        # # # input must be 2D array
         # result = model.predict(
-        #     [[age, gender]])
+        #     [[cholesterol, height, body_mass, body_mass_index, SYS_on_left_hand, DIA_on_left_hand,
+        #       SYS_on_right_hand, DIA_on_right_hand, age, gender, density_specific_gravity, ESR, total_bilirubin,
+        #       NEUT_segmented_neutrophils, hemoglobin, NEUT, lymphocytes, leukocytes, AlAT_level, AsAT_level,
+        #       sticknuclear_neutrophils, monocytes, eosinophils, urobilin_quantitative, glucose_capillary_blood,
+        #       amount_of_urine]])
         # print('------------')
         # print('Result:')
         # print('------------')
@@ -141,7 +170,7 @@ class Command(BaseCommand):
         sns.set(font_scale = 5)
         sns.set(style="whitegrid", color_codes=True, font_scale = 1.7)
         fig, ax = plt.subplots()
-        fig.set_size_inches(104,104)
+        fig.set_size_inches(60,30)
         sns.barplot(x=importances['Gini-Importance'], y=importances['Features'], data=importances, color='skyblue')
         plt.xlabel('Importance', fontsize=25, weight = 'bold')
         plt.ylabel('Features', fontsize=25, weight = 'bold')
@@ -149,13 +178,13 @@ class Command(BaseCommand):
         # display(plt.show())
         print(importances)
         plt.savefig('importances.png')
-        pca_test = PCA(n_components=18)
+        pca_test = PCA(n_components=11)
         pca_test.fit(X_train)
         sns.set(style='whitegrid')
         plt.plot(np.cumsum(pca_test.explained_variance_ratio_))
         plt.xlabel('number of components')
         plt.ylabel('cumulative explained variance')
-        plt.axvline(linewidth=4, color='r', linestyle = '--', x=10, ymin=0, ymax=104)
+        plt.axvline(linewidth=4, color='r', linestyle = '--', x=0.2, ymin=0, ymax=11)
         plt.savefig('PCA.png')
         evr = pca_test.explained_variance_ratio_
         cvr = np.cumsum(pca_test.explained_variance_ratio_)

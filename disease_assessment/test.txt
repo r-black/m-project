@@ -1,0 +1,64 @@
+Enter cholesterol (mMol/L): 4.8
+Enter height (cm): 180
+Enter body mass (kg): 80
+Enter body mass index (number): 24.7
+Enter SYS on the left hand (number): 130
+Enter DIA on the left hand (number): 90
+Enter SYS on the right hand (number): 130
+Enter DIA on the right hand (number): 80
+Enter age (years): 29
+Enter gender (0 or 1): 1
+Enter density (specific gravity) (g/l): 1020
+Enter ESR (СОЭ) (mm/h): 8
+Enter total bilirubin (μMol/L): 14
+Enter NEUT (segmented neutrophils) (%): 60
+Enter hemoglobin (g/l): 164
+Enter NEUT (*10^9/l): 6
+Enter lymphocytes (%): 26
+Enter leukocytes (*10^9/l): 10
+Enter AlAT level (U/L): 22
+Enter AsAT level (U/L): 22
+Enter sticknuclear neutrophils (%): 2
+Enter monocytes (%): 2
+Enter eosinophils (%): 2
+Enter urobilin (quantitative) (mMol/L): 5
+Enter glucose (capillary blood) (mMol/L): 3.8
+Enter amount of urine (ml): 50
+
+------------
+Result:
+------------
+[True]
+------------
+
+Enter cholesterol (mMol/L): 4
+Enter height (cm): 180
+Enter body mass (kg): 70
+Enter body mass index (number): 21.6
+Enter SYS on the left hand (number): 130
+Enter DIA on the left hand (number): 90
+Enter SYS on the right hand (number): 120
+Enter DIA on the right hand (number): 80
+Enter age (years): 18
+Enter gender (0 or 1): 1
+Enter density (specific gravity) (g/l): 1000
+Enter ESR (СОЭ) (mm/h): 7
+Enter total bilirubin (μMol/L): 10
+Enter NEUT (segmented neutrophils) (%): 50
+Enter hemoglobin (g/l): 140
+Enter NEUT (*10^9/l): 2
+Enter lymphocytes (%): 20
+Enter leukocytes (*10^9/l): 8
+Enter AlAT level (U/L): 22
+Enter AsAT level (U/L): 22
+Enter sticknuclear neutrophils (%): 50
+Enter monocytes (%): 2
+Enter eosinophils (%): 2
+Enter urobilin (quantitative) (mMol/L): 4
+Enter glucose (capillary blood) (mMol/L): 3
+Enter amount of urine (ml): 50
+------------
+Result:
+------------
+[False]
+------------
