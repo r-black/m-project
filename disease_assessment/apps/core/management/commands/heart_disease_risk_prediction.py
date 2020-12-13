@@ -1,7 +1,7 @@
 from datetime import date
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, recall_score
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, recall_score, plot_roc_curve
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -73,16 +73,16 @@ class Command(BaseCommand):
                  'общий билирубин', 'NEUT (сегментоядерные нейтрофилы)', 'HGB (гемоглобин)', 'NEUT#', 'LYM (лимфоциты)',
                  'WBC (лейкоциты)', 'уровень АлАТ', 'уровень АсАТ', 'палочкоядерные нейтрофилы', 'MONO (моноциты)',
                  'EO (эозинофилы)', 'уробилин (количественно)', 'глюкоза (капиллярная кровь)', 'количество']]
-        # df = df.apply(pd.to_numeric, errors='coerce')
-        # df = df.replace([np.inf, -np.inf], np.nan)
-        # df = df.fillna(0)
+        df = df.apply(pd.to_numeric, errors='coerce')
+        df = df.replace([np.inf, -np.inf], np.nan)
+        df = df.fillna(0)
         X = df
         y = target
         print(df)
         # print(df.columns.tolist())
 
         # # Create training and testing vars, It’s usually around 80/20 or 70/30.
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.8, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.8, random_state=1437)
 
         # # Now we’ll fit the model on the training data
         model = RandomForestClassifier()
@@ -167,31 +167,35 @@ class Command(BaseCommand):
         importances = importances.sort_values(by='Gini-Importance', ascending=False)
         importances = importances.reset_index()
         importances = importances.rename(columns={'index': 'Features'})
-        sns.set(font_scale = 5)
-        sns.set(style="whitegrid", color_codes=True, font_scale = 1.7)
+        sns.set(font_scale = 10)
+        sns.set(style="whitegrid", color_codes=True, font_scale = 4.7)
         fig, ax = plt.subplots()
-        fig.set_size_inches(60,30)
+        fig.set_size_inches(90,45)
         sns.barplot(x=importances['Gini-Importance'], y=importances['Features'], data=importances, color='skyblue')
-        plt.xlabel('Importance', fontsize=25, weight = 'bold')
-        plt.ylabel('Features', fontsize=25, weight = 'bold')
-        plt.title('Feature Importance', fontsize=25, weight = 'bold')
-        # display(plt.show())
+        plt.xlabel('Importance', fontsize=65, weight = 'bold')
+        plt.ylabel('Features', fontsize=65, weight = 'bold')
+        plt.title('Feature Importance', fontsize=65, weight = 'bold')
         print(importances)
         plt.savefig('importances.png')
-        pca_test = PCA(n_components=11)
-        pca_test.fit(X_train)
-        sns.set(style='whitegrid')
-        plt.plot(np.cumsum(pca_test.explained_variance_ratio_))
-        plt.xlabel('number of components')
-        plt.ylabel('cumulative explained variance')
-        plt.axvline(linewidth=4, color='r', linestyle = '--', x=0.2, ymin=0, ymax=11)
-        plt.savefig('PCA.png')
-        evr = pca_test.explained_variance_ratio_
-        cvr = np.cumsum(pca_test.explained_variance_ratio_)
-        pca_df = pd.DataFrame()
-        pca_df['Cumulative Variance Ratio'] = cvr
-        pca_df['Explained Variance Ratio'] = evr
-        print(pca_df.head(10))
+
+        # pca_test = PCA(n_components=11)
+        # pca_test.fit(X_train)
+        # sns.set(style='whitegrid')
+        # plt.plot(np.cumsum(pca_test.explained_variance_ratio_))
+        # plt.xlabel('number of components')
+        # plt.ylabel('cumulative explained variance')
+        # plt.axvline(linewidth=4, color='r', linestyle = '--', x=0.2, ymin=0, ymax=11)
+        # plt.savefig('PCA.png')
+        # evr = pca_test.explained_variance_ratio_
+        # cvr = np.cumsum(pca_test.explained_variance_ratio_)
+        # pca_df = pd.DataFrame()
+        # pca_df['Cumulative Variance Ratio'] = cvr
+        # pca_df['Explained Variance Ratio'] = evr
+        # print(pca_df.head(10))
+
+        # ax = plt.gca()
+        # rfc_disp = plot_roc_curve(model, X_test, y_test, ax=ax, alpha=0.8)
+        # plt.savefig('ROC.png')
 
         # y_pred = model.predict(X_test)
         # # y_pred_gs = gs.best_estimator_.predict(X_test)
