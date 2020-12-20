@@ -31,9 +31,54 @@ class Person(models.Model):
     gender = models.PositiveIntegerField(blank=True, null=True)
 
     def save(self, *args, **kwargs):
-        self.age = self.get_age()
-        self.gender = self.get_gender()
-        super(Person, self).save(*args, **kwargs)
+        last_medical_test = MedicalTest.objects.filter(person=1540901).order_by(
+            'person_id', 'property_id', '-end_date').distinct('person_id', 'property_id')
+        print(last_medical_test)
+        # cholesterol = float(input('Enter cholesterol (mMol/L): '))
+        # height = float(input('Enter height (cm): '))
+        # body_mass = float(input('Enter body mass (kg): '))
+        # body_mass_index = float(input('Enter body mass index (number): '))
+        # SYS_on_left_hand = float(input('Enter SYS on the left hand (number): '))
+        # DIA_on_left_hand = float(input('Enter DIA on the left hand (number): '))
+        # SYS_on_right_hand = float(input('Enter SYS on the right hand (number): '))
+        # DIA_on_right_hand = float(input('Enter DIA on the right hand (number): '))
+        # age = float(input('Enter age (years): '))
+        # gender = float(input('Enter gender (0 or 1): '))
+        # density_specific_gravity = float(input('Enter density (specific gravity) (g/l): '))
+        # ESR = float(input('Enter ESR (СОЭ) (mm/h): '))
+        # total_bilirubin = float(input('Enter total bilirubin (μMol/L): '))
+        # NEUT_segmented_neutrophils = int(input('Enter NEUT (segmented neutrophils) (%): '))
+        # hemoglobin = float(input('Enter hemoglobin (g/l): '))
+        # NEUT = float(input('Enter NEUT (*10^9/l): '))
+        # lymphocytes = float(input('Enter lymphocytes (%): '))
+        # leukocytes = float(input('Enter leukocytes (*10^9/l): '))
+        # AlAT_level = float(input('Enter AlAT level (U/L): '))
+        # AsAT_level = float(input('Enter AsAT level (U/L): '))
+        # sticknuclear_neutrophils = float(input('Enter sticknuclear neutrophils (%): '))
+        # monocytes = float(input('Enter monocytes (%): '))
+        # eosinophils = float(input('Enter eosinophils (%): '))
+        # urobilin_quantitative = float(input('Enter urobilin (quantitative) (mMol/L): '))
+        # glucose_capillary_blood = float(input('Enter glucose (capillary blood) (mMol/L): '))
+        # amount_of_urine = float(input('Enter amount of urine (ml): '))
+
+        # # # # input must be 2D array
+        # result = model.predict(
+        #     [[cholesterol, height, body_mass, body_mass_index, SYS_on_left_hand, DIA_on_left_hand,
+        #       SYS_on_right_hand, DIA_on_right_hand, age, gender, density_specific_gravity, ESR, total_bilirubin,
+        #       NEUT_segmented_neutrophils, hemoglobin, NEUT, lymphocytes, leukocytes, AlAT_level, AsAT_level,
+        #       sticknuclear_neutrophils, monocytes, eosinophils, urobilin_quantitative, glucose_capillary_blood,
+        #       amount_of_urine]])
+
+        # Unpickle model
+        # model = pd.read_pickle(r"new_model.pickle")
+        # Make prediction
+        # result = model.predict(
+        #     [[age, gender, systolic_blood_pressure, diastolic_blood_pressure, heart_rate]])
+
+        # heart_disease_risk = result[0]
+        # print(heart_disease_risk)
+        # Person.objects.filter(id=person_id).update(heart_disease_risk=heart_disease_risk)
+        # super(MedicalRecord, self).save(*args, **kwargs)
 
     def get_age(self):
         today = date.today()

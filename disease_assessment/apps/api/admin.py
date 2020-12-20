@@ -12,6 +12,7 @@ from apps.api.models import (
 
 @admin.register(Person)
 class PersonAdmin(admin.ModelAdmin):
+    ordering = ('id',)
     list_display = (
         'id',
         'birthdate',
@@ -59,6 +60,7 @@ class AnamnesisAdmin(admin.ModelAdmin):
 @admin.register(MedicalTest)
 class MedicalTestAdmin(admin.ModelAdmin):
     raw_id_fields = ('person',)
+    ordering = ('person_id',)
     list_display = (
         'person_id',
         'service_code',
@@ -78,6 +80,7 @@ class MedicalTestAdmin(admin.ModelAdmin):
 @admin.register(EMRProperty)
 class EMRPropertyAdmin(admin.ModelAdmin):
     raw_id_fields = ('person',)
+    ordering = ('person_id',)
     list_display = (
         'person_id',
         'service_code',
